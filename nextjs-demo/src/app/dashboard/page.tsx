@@ -1,7 +1,9 @@
-export default function DashboardPage() {
+const DashboardPage = (): JSX.Element => {
   return (
     <div className="Dashboard-page">
-      <p>Hello, dashboard page !</p>
+      <h1>Welcome to dashboard page</h1>
     </div>
-  )
-}
+  );
+};
+
+export default DashboardPage;
