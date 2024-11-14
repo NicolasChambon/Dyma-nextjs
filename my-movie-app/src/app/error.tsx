@@ -4,7 +4,7 @@ const Error = (): JSX.Element => {
   return (
     <div className="error">
       <h1>Erreur</h1>
-      <p>Oups, une erreur s&apos; est produite.</p>
+      <p>Oups, une erreur s&apos;est produite.</p>
     </div>
   );
 };
