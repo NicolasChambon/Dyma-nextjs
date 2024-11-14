@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+body {
+  margin: 0;
+}
+
+.error {
+  align-items: center;
+  color: $secondaryColor;
+  display: flex;
+  flex-direction: column;
+  font-family: $secondFont;
+  justify-content: center;
+  min-height: 90vh;
+  width: 100%;
+
+  h1 {
+    font-size: 100px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}

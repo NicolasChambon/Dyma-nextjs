@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import './globals.scss';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { roboto, montserrat } from '@/fonts';
 
