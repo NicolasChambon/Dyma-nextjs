@@ -11,8 +11,7 @@ interface Comment {
 const CommentList = async (): Promise<JSX.Element> => {
   const response = await fetch('https://jsonplaceholder.typicode.com/comments');
   let comments: Array<Comment> = await response.json();
-  comments = comments.slice(0, 20);
-  console.log(comments);
+  comments = comments.slice(0, 5);
   return (
     <div>
       {comments.map((comment: any) => (
