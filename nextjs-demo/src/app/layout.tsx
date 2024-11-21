@@ -1,3 +1,4 @@
+// import Header from '@/components/Header';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -13,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* <Header /> */}
       <body>{children}</body>
     </html>
   );
