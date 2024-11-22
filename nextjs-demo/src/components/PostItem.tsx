@@ -1,5 +1,7 @@
+import './PostItem.scss';
+
 export interface Post {
-  id: number;
+  id: string;
   title: string;
   isDone: boolean;
 }

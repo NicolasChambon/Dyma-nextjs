@@ -1,0 +1,21 @@
+.form {
+  margin: 0 auto;
+  width: 40rem;
+
+  &-text,
+  &-submit {
+    height: 3rem;
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem 2rem;
+  }
+
+  &-text {
+    width: 75%;
+  }
+
+  &-submit {
+    width: 25%;
+  }
+}
