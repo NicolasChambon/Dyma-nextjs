@@ -1,14 +1,22 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
 import './PostForm.scss';
 
 const PostForm = () => {
+  const router = useRouter();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const title = formData.get('title');
 
-    console.dir(title);
+    fetch('/api/posts', {
+      method: 'POST',
+      body: JSON.stringify({
+        title
+      })
+    }).then(() => router.refresh());
   };
 
   return (
