@@ -9,8 +9,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cinemadamgan.fr',
-        pathname: '/wp-content/uploads/**'
+        hostname: 'image.tmdb.org',
+        pathname: '/t/p/**'
       }
     ]
   }

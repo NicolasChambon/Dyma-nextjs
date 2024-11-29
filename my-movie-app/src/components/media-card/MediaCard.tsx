@@ -1,21 +1,28 @@
-import Image from 'next/image';
-import styles from './MediaCard.module.scss';
+// Components
+import Image from 'next/image'; // Specific next component for img
 import Link from 'next/link';
 
-const MediaCard = ({ mediaId }: { mediaId: number }): JSX.Element => {
+// Types
+import { Movie } from '@/interfaces/movies';
+
+// Styles
+import styles from './MediaCard.module.scss';
+
+const MediaCard = ({ media }: { media: Movie }): JSX.Element => {
   return (
     <div className={styles.card}>
-      <Link href={`/movies/${mediaId}`}>
+      <Link href={`/movies/${media.id}`}>
         <div className={styles.image}>
           <Image
-            src="https://cinemadamgan.fr/wp-content/uploads/2023/03/CREED-III.jpg"
-            alt="media title"
+            src={`${process.env.TMDB_IMAGE_BASE_PATH}${media.poster_path}`}
+            alt={media.title}
             fill
           />
         </div>
         <div className={styles.content}>
-          <h2>Creed III</h2>
-          <p>Le 05/11/2024</p>
+          <p className={styles.vote}>{media.vote_average.toFixed(1)}</p>
+          <h3>{media.title}</h3>
+          <p>Le {new Date(media.release_date).toLocaleDateString('fr-FR')}</p>
         </div>
       </Link>
     </div>

@@ -9,6 +9,13 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  color: $secondaryColor;
+  font-weight: bold;
+  font-size: 26px;
+  margin-top: 40px;
+}
+
 .error {
   align-items: center;
   color: $secondaryColor;

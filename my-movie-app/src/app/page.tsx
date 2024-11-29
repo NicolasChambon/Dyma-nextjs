@@ -1,10 +1,10 @@
-import MediaCard from '@/components/media-card/MediaCard';
 import styles from './page.module.scss';
+import Popular from '@/components/popular/Popular';
 
 const Home = (): JSX.Element => {
   return (
     <div className={styles.main}>
-      <MediaCard mediaId={10} />
+      <Popular />
     </div>
   );
 };
