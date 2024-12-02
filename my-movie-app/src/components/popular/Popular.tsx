@@ -4,15 +4,11 @@ import MediaCard from '../media-card/MediaCard';
 // Utils
 import { getMovieByPath } from '@/utils/movieClient';
 
-// Types
-import { Movie } from '@/interfaces/movies';
-
 // Style
 import styles from './Popular.module.scss';
 
 const Popular = async () => {
-  const { results }: { results: Array<Movie> } =
-    await getMovieByPath('/movie/popular');
+  const { results } = await getMovieByPath('/movie/popular');
   const popularMovies = results.slice(0, 6);
   return (
     <div>
