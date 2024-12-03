@@ -1,14 +1,17 @@
 // Components
-import MediaCard from '../media-card/MediaCard';
+import MediaCard from '../Media-card/MediaCard';
 
 // Utils
 import { getMovieByPath } from '@/utils/movieClient';
+
+// Types
+import { MovieList } from '@/interfaces/movies';
 
 // Style
 import styles from './Popular.module.scss';
 
 const Popular = async () => {
-  const { results } = await getMovieByPath('/movie/popular');
+  const { results } = (await getMovieByPath('/movie/popular')) as MovieList;
   const popularMovies = results.slice(0, 6);
   return (
     <div>

@@ -1,10 +1,12 @@
+import Genres from '@/components/genres/Genres';
 import styles from './page.module.scss';
-import Popular from '@/components/popular/Popular';
+import Popular from '@/components/Popular/Popular';
 
-const Home = (): JSX.Element => {
+const Home = () => {
   return (
     <div className={styles.main}>
       <Popular />
+      <Genres />
     </div>
   );
 };
